@@ -1,0 +1,44 @@
+package View;
+
+import java.util.Scanner;
+
+import Module.Calcular;
+
+public class Game {
+	static Scanner teclado=new Scanner(System.in);
+	static int pontos=0;
+	static Calcular calc;
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Game.jogar();
+		
+		
+		
+	}
+	public static void jogar() {
+		
+		System.out.println("informe o nivel de difulculdade(1 a 4)");
+		int dificuldade=Game.teclado.nextInt();
+		Game.calc=new Calcular(dificuldade);
+		System.out.println("informe o resultado para a seguinte operação: ");
+		if(calc.getOperacao()==0) {
+			System.out.println(calc.getValor()+" + "+calc.getValor2());
+			int resposta=Game.teclado.nextInt();
+			
+		}else if(calc.getOperacao()==1) {
+			System.out.println(calc.getValor()+" - "+calc.getValor2());
+			int resposta=Game.teclado.nextInt();
+			
+		}else if(calc.getOperacao()==2) {
+			System.out.println(calc.getValor()+" * "+calc.getValor2());
+			int resposta=Game.teclado.nextInt();
+			
+		}
+		
+		
+		
+		
+	}
+
+}
